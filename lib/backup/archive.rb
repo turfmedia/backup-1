@@ -123,7 +123,7 @@ module Backup
 
     def paths_to_exclude
       options[:excludes].map do |path|
-        "--exclude='#{prepare_path(path)}'"
+        "--exclude='path'"
       end.join(" ")
     end
 
