@@ -72,7 +72,6 @@ module Backup
       with_files_from(paths_to_package) do |files_from|
         cmd = "#{tar_command} #{tar_options} -cPf -#{tar_root} " \
             "#{paths_to_exclude} #{files_from}"
-        puts cmd
         pipeline.add(
           cmd,
           tar_success_codes
